@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+  <h2 style="text-align: center;">NCERT Class10 Mathematics Quiz</h2>
+  <!-- <img src="../assets/resources/img/SixthScience.jpg" class="img-fluid img-thumbnail" alt=""> -->
+</div>
+  <div class="container-fluid">
+    <ul *ngFor="let q of TenData">
+        <span *ngIf="q.subject==='maths'">
+      <li><h5 style="font-family: 'Roboto', sans-serif;">{{q.question}}</h5></li>
+      <div class="form-check">
+      <form #basicForm="ngForm" (ngSubmit)="getValue(basicForm.value, q)">
+        <input type="radio" class="form-check-input" name="rb" #one id="option1" ngModel required value="{{q.option1}}" style="height:16px; width:16px; vertical-align: middle;margin-right: 10px;">
+        <label for="option1" class="form-check-label">{{q.option1}}</label><br>
+        <input type="radio" class="form-check-input" name="rb" #two id="option2" ngModel required value="{{q.option2}}" style="height:16px; width:16px; vertical-align: middle;margin-right: 10px;">
+        <label for="option2" class="form-check-label">{{q.option2}}</label><br>
+        <!--<span style="font-size: 20px;">{{q.option2}}</span><br><span *ngIf="q.option2===q.answer">Correct</span><br>-->
+        <input type="radio" class="form-check-input" name="rb" #three id="option3" ngModel required value="{{q.option3}}" style="height:16px; width:16px; vertical-align: middle;margin-right: 10px;">
+        <label for="option3" class="form-check-label">{{q.option3}}</label><br>
+        <input type="radio" class="form-check-input" name="rb" #four id="option4" ngModel required value="{{q.option4}}" style="height:16px; width:16px; vertical-align: middle;margin-right: 10px;">
+        <label for="option4" class="form-check-label">{{q.option4}}</label><br>
+        <!-- <span *ngIf="basicForm.invalid && basicForm.touched" style="color: red;">Choose One</span><br> -->
+        <button  class="btn btn-sm btn-primary mt-2" [disabled]="basicForm.invalid">Check</button>
+        <p *ngIf="this.basicForm.value.rb == q.answer && this.basicForm.touched"><span style="color: green;">Correct</span>
+        <p *ngIf="this.basicForm.value.rb !== q.answer && this.basicForm.touched"><span style="color: red;">Wrong</span></p><hr>
+        <!-- <button [disabled]="basicForm.invalid" *ngIf="basicForm.valid" class="btn btn-sm btn-primary" #check ngModel>Check</button> -->
+      </form>
+    </div>
+    </span>
+    </ul>
+</div>
+<div class="container">
+<a routerLink="/class10"><button class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+</svg></button></a>
+</div>
+
+</body>
+</html>

@@ -1,1 +1,160 @@
-<img src="./assets/resources/img/balugoudi.jpeg" alt="" width="100%" height="auto">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Moon+Dance&family=Open+Sans:ital,wght@1,300&family=Roboto:ital,wght@0,300;1,100;1,400&family=Stardos+Stencil&display=swap" rel="stylesheet">
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/">Quiz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <!--
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/currentaffairs/CurrentAffairsQuiz">Current Affairs</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="/generalknowledge/gk">Gk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="/class6">Class 6</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="/class7">Class 7</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="/class8">Class 8</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="/class9">Class 9</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" routerLink="/class10">Class 10</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+<!--
+<div class="container">
+<h1 class="" style="text-align: center;"><b>NCERT Quizzes</b></h1>
+</div>
+<div class="container-fluid">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" routerLink="/class6">Class 6</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/class7/7">Class 7</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/class8/8">Class 8</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/class9/9">Class 9</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/class10/10">Class10</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/CurrentAffairs">Current Affairs</a>
+    </li>
+  </ul>
+</div> -->
+  <!--
+  <div class="container-fluid">
+  <table class="table table-dark table-sm">
+    <thead>
+      <tr>
+        <th scope="col">S/C</th>
+        <th scope="col">Science</th>
+        <th scope="col">Social Science</th>
+        <th scope="col">Mathematics</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Class 6</th>
+        <td><a routerLink="">link</a></td>
+        <td><a routerLink="">link</a></td>
+        <td><a routerLink="">link</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Class 7</th>
+        <td><a routerLink="">link</a></td>
+        <td><a routerLink="">link</a></td>
+        <td><a routerLink="">link</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Class 8</th>
+        <td><a routerLink="">link</a></td>
+        <td><a routerLink="">link</a></td>
+        <td><a routerLink="">link</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Class 9</th>
+        <td><a routerLink="">link</a></td>
+        <td><a routerLink="">link</a></td>
+        <td><a routerLink="">link</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Class 10</th>
+        <td><a routerLink="">link</a></td>
+        <td><a routerLink="">link</a></td>
+        <td><a routerLink="">link</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Class 7</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">Class 7</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+    </tbody>
+  </table>
+</div>-->
+<router-outlet></router-outlet>
+<!--
+  <div class="container-fluid">
+    <ul *ngFor="let q of questions">
+      <li><h2 style="font-family: 'Roboto', sans-serif;">{{q.question}}</h2></li>
+      <form #basicForm="ngForm" (ngSubmit)="getValue(basicForm.value, q)">
+        <input type="radio" name="rb" #one id="option1" ngModel required value="{{q.option1}}" style="height:16px; width:16px; vertical-align: middle;margin-right: 10px;">
+        <label for="option1">{{q.option1}}</label><br>
+        <input type="radio" name="rb" #two id="option2" ngModel required value="{{q.option2}}" style="height:16px; width:16px; vertical-align: middle;margin-right: 10px;">
+        <label for="option2">{{q.option2}}</label><br>
+        <span style="font-size: 20px;">{{q.option2}}</span><br><span *ngIf="q.option2===q.answer">Correct</span><br>
+        <input type="radio" name="rb" #three id="option3" ngModel required value="{{q.option3}}" style="height:16px; width:16px; vertical-align: middle;margin-right: 10px;">
+        <label for="option3">{{q.option3}}</label><br>
+        <input type="radio" name="rb" #four id="option4" ngModel required value="{{q.option4}}" style="height:16px; width:16px; vertical-align: middle;margin-right: 10px;">
+        <label for="option4">{{q.option4}}</label>
+        <span *ngIf="basicForm.invalid && basicForm.touched" style="color: red;">Choose One</span><br>
+        <button  class="btn btn-sm btn-primary mt-2" [disabled]="basicForm.invalid">View Answer</button>
+        <p *ngIf="basicForm.value.rb == q.answer && basicForm.touched"><span style="color: green;">Correct</span>
+        <p *ngIf="basicForm.value.rb !== q.answer && basicForm.touched"><span style="color: red;">Wrong</span></p><hr>
+        <button [disabled]="basicForm.invalid" *ngIf="basicForm.valid" class="btn btn-sm btn-primary" #check ngModel>Check</button>
+      </form>
+    </ul>
+  </div>-->
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
