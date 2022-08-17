@@ -5,13 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class QuizServiceService {
-  sixurl="http://competativequiz.pythonanywhere.com/quiz/sixapi/"
-  sevenurl="http://competativequiz.pythonanywhere.com/quiz/sevenapi/"
-  eighturl="http://competativequiz.pythonanywhere.com/quiz/eightapi/"
-  nineurl="http://competativequiz.pythonanywhere.com/quiz/nineapi/"
-  caurl="http://competativequiz.pythonanywhere.com/quiz/Currentapi/"
-  gurl="http://competativequiz.pythonanywhere.com/quiz/generalapi/"
-  tenurl="http://competativequiz.pythonanywhere.com/quiz/tenapi/"
+  sixurl="https://restquizz.herokuapp.com/quiz/sixapi/"
+  sevenurl="https://restquizz.herokuapp.com/quiz/sevenapi/"
+  eighturl="https://restquizz.herokuapp.com/quiz/eightapi/"
+  nineurl="https://restquizz.herokuapp.com/quiz/nineapi/"
+  caurl="https://restquizz.herokuapp.com/quiz/Currentapi/"
+  gurl="https://restquizz.herokuapp.com/quiz/generalapi/"
+  tenurl="https://restquizz.herokuapp.com/quiz/tenapi/"
   constructor(private http:HttpClient) { }
   getSixData(){
     return this.http.get(this.sixurl)
