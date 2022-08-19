@@ -7,8 +7,8 @@ const routes: Routes = [
   {path:'class8',loadChildren:()=>import('./class8/class8.module').then(mod=>mod.Class8Module)},
   {path:'class9',loadChildren:()=>import('./class9/class9.module').then(mod=>mod.Class9Module)},
   {path:'class10',loadChildren:()=>import('./class10/class10.module').then(mod=>mod.Class10Module)},
-  {path:'',loadChildren:()=>import('./current/current.module').then(mod=>mod.CurrentModule)},
-  {path:'generalknowledge',loadChildren:()=>import('./general/general.module').then(mod=>mod.GeneralModule)}
+  {path:'currentaffairs',loadChildren:()=>import('./current/current.module').then(mod=>mod.CurrentModule)},
+  {path:'',loadChildren:()=>import('./general/general.module').then(mod=>mod.GeneralModule)}
 ];
 
 @NgModule({

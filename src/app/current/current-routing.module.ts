@@ -4,7 +4,7 @@ import { CurrentaffairsComponent } from './currentaffairs/currentaffairs.compone
 
 const routes: Routes = [
   {
-    path:'',
+    path:'currentaffairsQuiz',
     component:CurrentaffairsComponent
   }
 ];

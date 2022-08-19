@@ -4,7 +4,7 @@ import { GkComponent } from './gk/gk.component';
 
 const routes: Routes = [
   {
-    path:'gk',
+    path:'',
     component:GkComponent
 }
 ];
